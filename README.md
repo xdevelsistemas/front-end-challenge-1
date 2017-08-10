@@ -35,12 +35,16 @@ Funcionalidades:
 - `cd <appName> && npm start` ou `cd <appName> && yarn start`
 - Acesse sua aplicação no endereço http://localhost:4200
 
-## Iniciando projeto com Angular Seed
+### Iniciando projeto com Angular Seed
 
 - `git clone https://github.com/angular/angular2-seed.git`
 - `cd angular2-seed && npm install` ou `cd angular2-seed && yarn`
 - `npm start` ou `yarn start`
 - Acesse sua aplicação em http://localhost:3000
+
+### Standard
+
+`npm install tslint-config-standard --save-dev` ou `yarn add tslint-config-standard --dev`
 
 
 ## Referências
