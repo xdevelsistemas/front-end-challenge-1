@@ -32,8 +32,8 @@ Funcionalidades:
 
 - `npm i -g @angular/cli` ou `yarn global add @angular/cli`
 - `ng new <appName> --routing --style=scss --prefix=<appPrefix> -v`
-  - <appName>: Nome da aplicação.
-  - <appProfix>: Prefixo adotado nos selectors.
+    - `<appName>`: Nome da aplicação.
+    - `<appProfix>`: Prefixo adotado nos selectors.
 - `cd <appName> && npm start` ou `cd <appName> && yarn start`
 - Acesse sua aplicação no endereço http://localhost:4200
 
