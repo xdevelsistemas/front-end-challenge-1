@@ -57,3 +57,4 @@ Funcionalidades:
 - [TypeScript](https://www.typescriptlang.org)
 - [JSDoc](http://usejsdoc.org)
 - [Commitizen](http://commitizen.github.io/cz-cli)
+- [Yarn](https://yarnpkg.com)
