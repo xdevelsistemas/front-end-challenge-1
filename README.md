@@ -14,7 +14,7 @@ O objetivo deste desafio é avaliarmos seu domínio em front-end com o framework
 
 ## O desafio
 
-Que tal dar uma de metereologista? A tarefa é criar uma ferramenta simples, que consuma a API do Yahoo de previsão do tempo (https://developer.yahoo.com/weather). O layout fica a critério o que conta são as funcionalidades.
+Que tal dar uma de meteorologista? A tarefa é criar uma ferramenta simples, que consuma a API do Yahoo de previsão do tempo (https://developer.yahoo.com/weather). O layout fica a critério o que conta são as funcionalidades.
 
 Funcionalidades:
 
