@@ -8,7 +8,9 @@ O objetivo deste desafio é avaliarmos seu domínio seu domínio em front-end co
 2. Desenvolver utilizando Angular na versão 2.x ou 4.x com TypeScript na versão 2.x e Bootstrap na versão 3 ou 4.
 3. O tslint e tsconfig deverão estar compatível com o disponibilizado neste repositório: [TSLint](tslint.json), [TSConfig](tsconfig.json).
 4. Layout responsivo, não importa se vai utilizar template gratuito ou criar do zero.
-5. Cobertura de teste mínima de 50% com karma e jasmine.
+5. Padrão de comentário: JSDoc.
+6. Padrão de commit: Commitizen.
+7. Bônus: Cobertura de teste mínima de 60% com karma e jasmine. (Opcional)
 
 ## O desafio
 
@@ -53,4 +55,5 @@ Funcionalidades:
 - [Angular 4](https://angular.io)
 - [Angular CLI](https://cli.angular.io)
 - [TypeScript](https://www.typescriptlang.org)
-- [TYPEDOC](http://typedoc.org)
+- [JSDoc](http://usejsdoc.org)
+- [Commitizen](http://commitizen.github.io/cz-cli)
