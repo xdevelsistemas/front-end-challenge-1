@@ -1,6 +1,6 @@
 # Desafio Front-end - Angular 2/4
 
-O objetivo deste desafio é avaliarmos seu domínio seu domínio em front-end com o framework angular, ou seja, seu estilo, boas práticas, organização e documentação.
+O objetivo deste desafio é avaliarmos seu domínio em front-end com o framework angular, ou seja, seu estilo, boas práticas, organização e documentação.
 
 ## Regras
 
