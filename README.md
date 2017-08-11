@@ -18,7 +18,7 @@ Que tal dar uma de meteorologista? A tarefa é criar uma ferramenta simples, que
 
 Funcionalidades:
 
-- Página inicial: Apenas com uma barra de pesquisa para digitar o nome da cidade e um local para aparecer as *informações de previsão do tempo quando pesquisado.
+- Página inicial: Apenas com uma barra de pesquisa para digitar o nome da cidade e um local para aparecer as *informações de previsão do tempo quando pesquisado.*
 - "Capitais": Página com todas as capitais do Brasil contendo informações de temperatura máxima e mínima.
 - Barra de navegação para alternar entre a página inicial e a página de capitais.
 
