@@ -1,19 +1,19 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
-import { AutoCompleteModule } from 'primeng/primeng';
-import { MessagesModule } from 'primeng/primeng';
-import { SharedService } from './services/shared.service'
-import { Ng2PageScrollModule } from 'ng2-page-scroll';
-import { DataTableModule } from 'primeng/primeng';
+import {NgModule} from '@angular/core'
+import {FormsModule} from '@angular/forms'
+import {HttpModule} from '@angular/http'
+import {BrowserModule} from '@angular/platform-browser'
+import {Ng2PageScrollModule} from 'ng2-page-scroll'
+import {AutoCompleteModule} from 'primeng/primeng'
+import {MessagesModule} from 'primeng/primeng'
+import {DataTableModule} from 'primeng/primeng'
+import {SharedService} from './services/shared.service'
 
-import { appRouting } from './app.routing';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { CapitaisComponent } from './capitais/capitais.component';
-import { SearchComponent } from './search/search.component';
-import { WeatherComponent } from './weather/weather.component'
+import {AppComponent} from './app.component'
+import {appRouting} from './app.routing'
+import {CapitaisComponent} from './capitais/capitais.component'
+import {HomeComponent} from './home/home.component'
+import {SearchComponent} from './search/search.component'
+import {WeatherComponent} from './weather/weather.component'
 
 
 @NgModule({
@@ -22,7 +22,7 @@ import { WeatherComponent } from './weather/weather.component'
     HomeComponent,
     CapitaisComponent,
     SearchComponent,
-    WeatherComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
@@ -37,4 +37,5 @@ import { WeatherComponent } from './weather/weather.component'
   providers: [SharedService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

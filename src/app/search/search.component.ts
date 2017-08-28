@@ -1,8 +1,7 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-
-import { Configuration } from '../app.constants'
-import { WeatherService } from '../services/weather.service';
-import { SharedService } from '../services/shared.service';
+import {Component, ViewEncapsulation} from '@angular/core'
+import {AppConfig} from '../app.constants'
+import {SharedService} from '../services/shared.service'
+import {WeatherService} from '../services/weather.service'
 
 @Component({
   selector: 'app-search',
@@ -13,35 +12,37 @@ import { SharedService } from '../services/shared.service';
 })
 
 export class SearchComponent {
-  cities: any[];
-  filteredCities: any[];
+  cities: any[]
+  filteredCities: any[]
 
-  constructor(
-    private weatherService: WeatherService,
-    private _sharedService: SharedService,
-  ) { }
+  constructor (private weatherService: WeatherService, private sharedService: SharedService) {}
 
-  suggestCity(event: any) {
-    let query = event.query;
-    this.weatherService.getCities().then(cities => {
-      this.filteredCities = this.filterCountry(query, cities);
-    });
+  suggestCity (event: any) {
+    let query = event.query
+    this.weatherService.getCities()
+      .subscribe(
+        cities => {
+          this.filteredCities = this.filterCountry(query, cities)
+        })
   }
 
-  filterCountry(query: string, cities: any[]): any[] {
-    let filtered: any[] = [];
+  filterCountry (query: string, cities: any[]): any[] {
+    let filtered: any[] = []
     for (let i = 0; i < cities.length; i++) {
-      let city = cities[i];
-      if (Configuration.stripAccent(city.nome).toLowerCase().indexOf(Configuration.stripAccent(query).toLowerCase()) == 0) {
-        filtered.push(city);
+      let city = cities[i]
+      if (AppConfig.stripAccent(city.nome).toLowerCase().indexOf(AppConfig.stripAccent(query).toLowerCase()) === 0) {
+        filtered.push(city)
       }
     }
-    return filtered;
+    return filtered
   }
 
-  getWeatherCity(query: string) {
-    this.weatherService.getWeatherCity(query).then(weather => {
-      this._sharedService.publishData(weather);
-    })
+  getWeatherCity (query: string) {
+    this.weatherService.getWeatherCity(query)
+      .subscribe(
+        weather => {
+          console.log(weather)
+          this.sharedService.publishData(weather)
+        })
   }
 }

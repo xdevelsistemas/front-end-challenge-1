@@ -1,6 +1,5 @@
-import { Component, ViewEncapsulation, OnInit } from '@angular/core';
-
-import { WeatherService } from '../services/weather.service';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core'
+import {WeatherService} from '../services/weather.service'
 
 @Component({
   templateUrl: './capitais.component.html',
@@ -9,13 +8,14 @@ import { WeatherService } from '../services/weather.service';
   encapsulation: ViewEncapsulation.None
 })
 export class CapitaisComponent implements OnInit {
-  cities: object[];
+  cities: object[]
 
-  constructor(private weatherService: WeatherService) {}
+  constructor (private weatherService: WeatherService) {
+  }
 
-  ngOnInit() {
+  ngOnInit () {
     this.weatherService.getThisCities()
-      .then(cities => this.cities = cities);
+      .subscribe(cities => this.cities = cities)
   }
 
 }

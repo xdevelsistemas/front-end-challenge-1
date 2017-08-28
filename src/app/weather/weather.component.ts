@@ -1,8 +1,8 @@
-import { Component, Inject, AfterViewChecked, ViewChild } from '@angular/core';
-import { DOCUMENT} from '@angular/common';
-import { PageScrollService, PageScrollInstance } from 'ng2-page-scroll';
+import {DOCUMENT} from '@angular/common'
+import {Component, Inject, ViewChild} from '@angular/core'
+import {PageScrollInstance, PageScrollService} from 'ng2-page-scroll'
 
-import { SharedService } from '../services/shared.service';
+import {SharedService} from '../services/shared.service'
 
 @Component({
   selector: 'app-weather',
@@ -10,23 +10,23 @@ import { SharedService } from '../services/shared.service';
   styleUrls: ['./weather.component.css']
 })
 
-export class WeatherComponent implements AfterViewChecked {
+export class WeatherComponent {
 
   @ViewChild('container')
-  weatherCity: any;
-  constructor(
-    private _sharedService: SharedService,
-    private pageScrollService: PageScrollService,
-    @Inject(DOCUMENT) private document: any
-  ) {
-    this._sharedService.cityChanged$.subscribe(
-      (data) => { this.weatherCity = data, this.goWeatherInfo() }
-    );
+  weatherCity: any
+
+  constructor(private sharedService: SharedService,
+              private pageScrollService: PageScrollService,
+              @Inject(DOCUMENT) private document: any) {
+    this.sharedService.cityChanged$.subscribe(
+      (data) => {
+        this.weatherCity = data, this.goWeatherInfo()
+      }
+    )
   }
-  ngAfterViewChecked() { }
 
   public goWeatherInfo(): void {
-    let pageScrollInstance: PageScrollInstance = PageScrollInstance.simpleInstance(this.document, '#weatherInfos');
-    this.pageScrollService.start(pageScrollInstance);
-  };
+    let pageScrollInstance: PageScrollInstance = PageScrollInstance.simpleInstance(this.document, '#weatherInfos')
+    this.pageScrollService.start(pageScrollInstance)
+  }
 }

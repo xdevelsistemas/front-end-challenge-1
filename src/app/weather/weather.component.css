@@ -32,6 +32,7 @@ h1.city {
 .now:not(:first-child) {
   line-height: .8em;
 }
+
 /*@media (max-width: 544px){
   .now:not(:first-child){
     line-height: 1.5em;

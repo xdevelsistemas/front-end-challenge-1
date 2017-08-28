@@ -53,6 +53,10 @@
     "no-console": [
       true, "debug", "info", "assert", "count", "table", "warn"
     ],
-    "no-floating-promises": false
+    "no-floating-promises": false,
+    "one-variable-per-declaration": [
+      true,
+      "ignore-for-loop"
+    ]
   }
 }
