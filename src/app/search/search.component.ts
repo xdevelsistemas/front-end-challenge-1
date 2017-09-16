@@ -12,7 +12,6 @@ import {WeatherService} from '../services/weather.service'
 })
 
 export class SearchComponent {
-  cities: any[]
   filteredCities: any[]
 
   constructor (private weatherService: WeatherService, private sharedService: SharedService) {}

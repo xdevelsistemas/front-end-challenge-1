@@ -1,5 +1,4 @@
 <p-autoComplete
-  [(ngModel)]="country"
   [suggestions]="filteredCities"
   (completeMethod)="suggestCity($event)"
   #box (keyup.enter)="getWeatherCity(box.value)"

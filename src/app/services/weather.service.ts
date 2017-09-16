@@ -6,7 +6,6 @@ import {AppConfig} from '../app.constants'
 
 @Injectable()
 export class WeatherService {
-
   constructor (private http: Http) {}
 
   getWeatherCity (objCity: any) {
@@ -22,7 +21,7 @@ export class WeatherService {
   getThisCities () {
     let cities = [455827, 455826, 455825, 455821, 455922]
     let strQuery = `select * from weather.forecast where woeid in (` + cities + `) and u="c" &format=json`
-    return this.http.get('https://query.yahooapis.com/v1/public/yql?q=' + strQuery)
+    return this.http.get(AppConfig.apiWeather + strQuery)
       .map(res => res.json())
       .catch(err => {
         throw new Error(err.message)
