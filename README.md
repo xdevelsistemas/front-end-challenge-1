@@ -2,7 +2,7 @@
 
 O objetivo deste desafio é avaliarmos seu domínio em front-end com o framework angular, ou seja, seu estilo, boas práticas, organização e documentação.
 
-## Regras
+### Regras
 
 1. Todo seu código deverá ser disponibilizado em um repositório que seja fork deste e apresentado como um pull-request para a branch de avaliação.
 2. Desenvolver utilizando Angular na versão 2.x ou 4.x com TypeScript na versão 2.x e Bootstrap na versão 3 ou 4.
@@ -12,7 +12,7 @@ O objetivo deste desafio é avaliarmos seu domínio em front-end com o framework
 6. Padrão de commit: Commitizen.
 7. Bônus: Cobertura de teste mínima de 60% com karma e jasmine. (Opcional)
 
-## O desafio
+### O desafio
 
 Que tal dar uma de meteorologista? A tarefa é criar uma ferramenta simples, que consuma a API do Yahoo de previsão do tempo (https://developer.yahoo.com/weather). O layout fica a critério o que conta são as funcionalidades.
 
