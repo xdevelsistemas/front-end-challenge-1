@@ -48,6 +48,16 @@ Funcionalidades:
 
 `npm install tslint-config-standard --save-dev` ou `yarn add tslint-config-standard --dev`
 
+### Prettier
+
+`npm install tslint-config-prettier --save-dev` ou `yarn add tslint-config-prettier --dev`
+
+### TSLint
+
+Para verificar a quelaidade: 
+
+* Angular CLI: `ng lint --type-check` ou `npm run lint -- --type-check` ou `yarn lint -- --type-check`
+
 
 ## Referências
 
