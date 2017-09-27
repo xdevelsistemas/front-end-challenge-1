@@ -7,7 +7,7 @@ export class AppConfig {
   /*
     Funcao regex para remover acentos
   */
-  public static stripAccent(str: any) {
+  public static stripAccent (str: any) {
     let rExps = [
       {re: /[\xC0-\xC6]/g, ch: 'A'},
       {re: /[\xE0-\xE6]/g, ch: 'a'},
