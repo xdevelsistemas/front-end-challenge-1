@@ -20,15 +20,15 @@ export class SearchComponent {
     let query = event.query
     this.weatherService.getCities()
       .subscribe(
-        cities => {
-          this.filteredCities = this.filterCountry(query, cities)
+        cidades => {
+          this.filteredCities = this.filterCountry(query, cidades)
         })
   }
 
-  filterCountry (query: string, cities: any[]): any[] {
+  filterCountry (query: string, cidades: any) {
     let filtered: any[] = []
-    for (let i = 0; i < cities.length; i++) {
-      let city = cities[i]
+    for (let i = 0; i < cidades.length; i++) {
+      let city = cidades[i]
       if (AppConfig.stripAccent(city.nome).toLowerCase().indexOf(AppConfig.stripAccent(query).toLowerCase()) === 0) {
         filtered.push(city)
       }
@@ -36,8 +36,9 @@ export class SearchComponent {
     return filtered
   }
 
-  getWeatherCity (query: string) {
-    this.weatherService.getWeatherCity(query)
+  getWeatherCity (cidade: any) {
+    let nome = cidade.nome
+    this.weatherService.getWeatherCity(nome)
       .subscribe(
         weather => {
           console.log(weather)

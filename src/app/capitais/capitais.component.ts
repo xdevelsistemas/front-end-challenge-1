@@ -8,14 +8,14 @@ import {WeatherService} from '../services/weather.service'
   encapsulation: ViewEncapsulation.None
 })
 export class CapitaisComponent implements OnInit {
-  cities: object[]
+  cities: any
 
   constructor (private weatherService: WeatherService) {
   }
 
   ngOnInit () {
-    this.weatherService.getThisCities()
-      .subscribe(cities => this.cities = cities)
+    this.weatherService.getThisCities([455827, 455826, 455825, 455821, 455922])
+      .subscribe(cities =>this.cities = cities)
   }
 
 }

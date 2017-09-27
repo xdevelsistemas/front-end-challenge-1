@@ -15,7 +15,7 @@ export class WeatherComponent {
   @ViewChild('container')
   weatherCity: any
 
-  constructor(private sharedService: SharedService,
+  constructor (private sharedService: SharedService,
               private pageScrollService: PageScrollService,
               @Inject(DOCUMENT) private document: any) {
     this.sharedService.cityChanged$.subscribe(
@@ -25,7 +25,7 @@ export class WeatherComponent {
     )
   }
 
-  public goWeatherInfo(): void {
+  public goWeatherInfo (): void {
     let pageScrollInstance: PageScrollInstance = PageScrollInstance.simpleInstance(this.document, '#weatherInfos')
     this.pageScrollService.start(pageScrollInstance)
   }
