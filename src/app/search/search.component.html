@@ -1,7 +1,7 @@
 <p-autoComplete
   [suggestions]="filteredCities"
   (completeMethod)="suggestCity($event)"
-  #box (keyup.enter)="getWeatherCity(box.value)"
+  #box (keyup.enter)="getWeatherCity(box.value.nome)"
   field="nome"
   [size]="100"
   delay="400"

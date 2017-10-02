@@ -13,14 +13,15 @@ import {SharedService} from '../services/shared.service'
 export class WeatherComponent {
 
   @ViewChild('container')
-  weatherCity: any
+  weatherCity: string
 
   constructor (private sharedService: SharedService,
-              private pageScrollService: PageScrollService,
-              @Inject(DOCUMENT) private document: any) {
+               private pageScrollService: PageScrollService,
+               @Inject(DOCUMENT) private document: any) {
     this.sharedService.cityChanged$.subscribe(
       (data) => {
-        this.weatherCity = data, this.goWeatherInfo()
+        this.weatherCity = data
+        this.goWeatherInfo()
       }
     )
   }
