@@ -1,0 +1,13 @@
+<p-autoComplete
+  [suggestions]="filteredCities"
+  (completeMethod)="suggestCity($event)"
+  #box (keyup.enter)="getWeatherCity(box.value.nome)"
+  field="nome"
+  [size]="100"
+  delay="400"
+  inputStyleClass="form-control input-lg input-autocomplete"
+  emptyMessage="Nenhum resultado encontrado"
+  autoHighlight="true"
+  autofocus="true"
+  [minLength]="3">
+</p-autoComplete>

@@ -1,0 +1,6 @@
+<p-dataTable [value]="cities">
+  <p-column field="location.city" header="Cidade"></p-column>
+  <p-column field="item.condition.temp" header="Temperatura"></p-column>
+  <p-column field="item.forecast.0.low" header="Minima"></p-column>
+  <p-column field="item.forecast.0.high" header="Maxima">--</p-column>
+</p-dataTable>
