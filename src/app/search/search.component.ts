@@ -1,5 +1,6 @@
 import {Component, ViewEncapsulation} from '@angular/core'
 import {AppConfig} from '../app.constants'
+import {ICidades} from '../iterfaces'
 import {SharedService} from '../services/shared.service'
 import {WeatherService} from '../services/weather.service'
 
@@ -7,9 +8,9 @@ import {WeatherService} from '../services/weather.service'
 interface ISuggestCity {
   query: string
 }
-interface IFilteredCities {
-  nome: string
-}
+// interface IFiltered{
+//   nome: string;
+// }
 
 @Component({
   selector: 'app-search',
@@ -20,7 +21,7 @@ interface IFilteredCities {
 })
 
 export class SearchComponent {
-  filteredCities: IFilteredCities[]
+  filteredCities: ICidades[]
 
   constructor (private weatherService: WeatherService, private sharedService: SharedService) {}
 
@@ -28,13 +29,13 @@ export class SearchComponent {
     let query = event.query
     this.weatherService.getCities()
       .subscribe(
-        cities => {
+        (cities: ICidades[]) => {
           this.filteredCities = this.filterCountry(query, cities)
         })
   }
 
-  filterCountry (query: string, cities: IFilteredCities[]) {
-    let filtered: any[] = []
+  filterCountry (query: string, cities: ICidades[]) {
+    let filtered = []
     for (let i = 0; i < cities.length; i++) {
       let city = cities[i]
       if (AppConfig.stripAccent(city.nome).toLowerCase().indexOf(AppConfig.stripAccent(query).toLowerCase()) === 0) {
@@ -48,7 +49,7 @@ export class SearchComponent {
     this.weatherService.getWeatherCity(query)
       .subscribe(
         weather => {
-          this.sharedService.publishData(weather)
+          this.sharedService.publishData(weather.query.results.channel)
         })
   }
 }

@@ -19,4 +19,6 @@ export interface IWeather {
 
 export interface ICidades {
   nome: string
+  id: string,
+  estado: string
 }

@@ -36,6 +36,8 @@
       true,
       2
     ],
+    "await-promise": false,
+    "no-unused-variable": false,
     "no-empty": true,
     "no-for-in-array": true,
     "no-duplicate-variable": true,

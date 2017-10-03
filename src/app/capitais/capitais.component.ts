@@ -15,7 +15,7 @@ export class CapitaisComponent implements OnInit {
 
   ngOnInit () {
     this.weatherService.getThisCities([455827, 455826, 455825, 455821, 455922])
-      .subscribe(cities => this.cities = cities)
+      .subscribe(cities => this.cities = cities.query.results.channel)
   }
 
 }
