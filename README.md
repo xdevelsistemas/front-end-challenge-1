@@ -54,7 +54,7 @@ Funcionalidades:
 
 ### TSLint
 
-Para verificar a quelaidade: 
+Para verificar a qualidade: 
 
 * Angular CLI: `ng lint --type-check` ou `npm run lint -- --type-check` ou `yarn lint -- --type-check`
 
