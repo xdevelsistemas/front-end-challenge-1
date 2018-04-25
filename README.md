@@ -1,11 +1,11 @@
-# Desafio Front-end - Angular 2/4
+# Desafio Front-end - Angular 4+
 
 O objetivo deste desafio é avaliarmos seu domínio em front-end com o framework angular, ou seja, seu estilo, boas práticas, organização e documentação.
 
 ### Regras
 
 1. Todo seu código deverá ser disponibilizado em um repositório que seja fork deste e apresentado como um pull-request para a branch de avaliação.
-2. Desenvolver utilizando Angular na versão 2.x ou 4.x com TypeScript na versão 2.x e Bootstrap na versão 3 ou 4.
+2. Desenvolver utilizando Angular na versão 4.x ou superior com TypeScript na versão 2.x ou superior e Bootstrap na versão 3 ou 4.
 3. O tslint e tsconfig deverão estar compatível com o disponibilizado neste repositório: [TSLint](tslint.json), [TSConfig](tsconfig.json).
 4. Layout responsivo, não importa se vai utilizar template gratuito ou criar do zero.
 5. Padrão de comentário: JSDoc.
